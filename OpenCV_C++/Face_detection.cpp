@@ -32,9 +32,9 @@ int main()
 		rectangle(imgRes, faces_rect[i].tl(), faces_rect[i].br(), Scalar(255, 0, 255), 3);
 	}
 	
-
-
-
+	bool check = imwrite("Results/result_1.png", imgRes);
+	if (check == false) { cout << " SAVING FILE FAILED " << endl; }
+	else { cout << " SAVING SUCCESSFUL " << endl; }
 
 	imshow("Image_resized", imgRes);
 
