@@ -11,10 +11,12 @@ int main()
 {
 	string path = "Resources/shapes.png";
 	Mat img = imread(path);
-	imshow("Image", img);
+	Mat imgRes;
+
+	resize(img, imgRes, Size(), 2, 2);
+	imshow("Image_resized", imgRes);
+	
+	
 	waitKey();
 	return 0;
-
-
-
 }
